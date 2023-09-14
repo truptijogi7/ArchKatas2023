@@ -10,7 +10,7 @@
  |   |
  |   [4c] Car Rental Booking Detection :Car Registeration,Confirmation,Booking,Reference number,Date,Time
  |   |
- |   [4d] Hotel Booking Detection :Booking,Reference,Reservation,Accomodation,Bed,Breakfast,Date,Time
+ |   [4d] Hotel Booking Detection :Booking,Reference,Reservation,Accomodation,Bed,Breakfast,Date,Time,Check-in,Check out
  |
 [5] Parsing Identified Emails
  |
@@ -18,11 +18,11 @@
  |
 [7] Mark Email as Processed
  |
-[8] Repeat for All Emails
+[8] Repeat for All Emails in the range of past 1 week
  |
-[9] Grouping and Presentation
+[9] Grouping and Presentation by Trip/Booking Id
  |
-[10] Error Handling
+[10] Error Handling -Retrieval Errors/Failures
  |
 [11] Update and Optimization
  |
