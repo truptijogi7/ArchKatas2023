@@ -48,22 +48,7 @@ Actors and their associated user roles for the next-generation online trip manag
     • Travel Analytics ( RoadWarriors):
       User Role:This role involves analyzing data collected by RoadWarriors, such as cancellation and update frequency, travel locations, and trends. The insights derived from this analysis can be used to improve the dashboard and enhance the travel experience for users.
       
-    • Payment Processor (Financial System):
-      User Role: The Payment Processor is responsible for handling financial transactions related to reservations and travel expenses. They ensure that payment information is securely integrated into the system and that transactions are processed accurately.
-      
-    • Notification Service:
-      User Role: The Notification Service sends real-time updates and alerts to travelers regarding their reservations. This role ensures that users receive timely information about their trips, including delays, cancellations, gate changes, and other important updates.
-
-
-      
-    • Localization Manager:
-      User Role: The Localization Manager ensures that the system is adapted to work internationally, including managing language translations, currency conversions, and region-specific travel information.
-      
-      
-      
-    • Email Integration System:
-      The email integration system automatically scans users' emails to poll for travel-related emails. It filters and whitelists certain emails, forwarding relevant travel information to the dashboard.
-      
+   
     • Third-Party Travel Systems (e.g., SABRE, APOLLO):
       These systems interface with the travel management dashboard to provide real-time updates on flight, hotel, and car rental reservations. The dashboard communicates with these systems to ensure users have up-to-date travel information.
       
