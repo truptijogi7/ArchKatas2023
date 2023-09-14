@@ -65,6 +65,21 @@ Store the extracted travel booking data in a database. You may need separate tab
 Implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations).
 Group the bookings into trips and create a trip identifier.
 
+Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations).
+
+## Dashboard Presentation:
+
+Develop a user-friendly dashboard where users can view their trips.
+
+Provide options to edit, delete, or add new bookings to the trip.
+
+## Notifications and Alerts:
+
+Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
+## User Preferences:
+
+Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
+
 ## CAP
 
 Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
