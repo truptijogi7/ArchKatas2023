@@ -1,16 +1,16 @@
-[1] Authenticate and Connect to Email Account
+[1] Authenticate and Connect to Registered Email Account
  |
-[2] Retrieve Unread Emails
+[2] Retrieve Unread Emails in the past 1 week(Polling Frequency?]
  |
 [3] Email Filtering (Keywords and Patterns)
  |   |
- |   [4a] Train Booking Detection
+ |   [4a] Train Booking Detection  Keywords:TrainNumber,Train,Rail
  |   |
- |   [4b] Air Booking Detection
+ |   [4b] Air Booking Detection Keywords:Flights,Air,Reservation,Confirmation
  |   |
- |   [4c] Car Rental Booking Detection
+ |   [4c] Car Rental Booking Detection :Car Registeration,Confirmation,Booking,Reference number
  |   |
- |   [4d] Hotel Booking Detection
+ |   [4d] Hotel Booking Detection :Booking,Reference,Reservation,Accomodation,Bed,Breakfast
  |
 [5] Parsing Identified Emails
  |
