@@ -49,6 +49,16 @@ The number of users per day ~2M/7=300k DAU and can go upto 15M/7~2M on peak time
 **Cost**     Since it is an international app with several integrations with travel agencies/partners,costs to integrate with the platform must be kept low.
 **Security**  It is important that the application is secure from malicious attacks which could exploit vulnerable user locations/stalk individuals.
 
+**Data Extractor**
+Extract relevant details from the identified emails, including:
+Flight details (e.g., airline, flight number, departure, arrival, date, time).
+Rail details (e.g., train name, departure, arrival, date, time).
+Car rental details (e.g., rental agency, pickup, return location, date, time).
+**Data Storage**
+Store the extracted travel booking data in a database. You may need separate tables for different types of bookings (air, rail, car).
+**Trip Grouping**
+Implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations).
+Group the bookings into trips and create a trip identifier.
 
 ## CAP
 
