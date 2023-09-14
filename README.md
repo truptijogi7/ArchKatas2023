@@ -33,7 +33,7 @@ The RoadWarriers App is designed to be a centralized dashboard for all the trips
 
 The UI needs to be interactive and Rich and responsiveness on web and mobile device is high
 
-The number of users per day 2M/7=300k DAU and can go upto 15M/7 approx 2M on peak times like seasonal holidays,school vacations etc.Scale and Elasticity therefore are important to be factored into the design
+The number of users per day 2M Weekly avergaing to approx 300k DAU and can go upto 15M at peak times like seasonal holidays,school vacations etc.Scale and Elasticity therefore are important to be factored into the design
 
 (1) Availability - The platform must allow users to connect with each other at any time of day or night as the app is international. And 5 mins per month ~60 mins Annual downtime will needa  highly available system of 99.99%.[Note :Not all services are critical and some microservices can be 99.9% available]
 
