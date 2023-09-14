@@ -58,9 +58,16 @@ Consistency of user experience on both web and mobile platforms as well as consi
 ## Capacity Planning
 Cloud Infra from AWS planner.
 
+## Users and Roles
+
+## Logical View
+
+## Physical View
+
 ## Deployment Strategy
 
 Need a deployment Diagram
+
 
 
 
