@@ -1,1 +1,29 @@
-
+[1] Authenticate and Connect to Email Account
+ |
+[2] Retrieve Unread Emails
+ |
+[3] Email Filtering (Keywords and Patterns)
+ |   |
+ |   [4a] Train Booking Detection
+ |   |
+ |   [4b] Air Booking Detection
+ |   |
+ |   [4c] Car Rental Booking Detection
+ |   |
+ |   [4d] Hotel Booking Detection
+ |
+[5] Parsing Identified Emails
+ |
+[6] Data Storage
+ |
+[7] Mark Email as Processed
+ |
+[8] Repeat for All Emails
+ |
+[9] Grouping and Presentation
+ |
+[10] Error Handling
+ |
+[11] Update and Optimization
+ |
+[12] User Notifications
