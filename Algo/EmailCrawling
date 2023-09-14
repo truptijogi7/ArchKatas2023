@@ -4,13 +4,13 @@
  |
 [3] Email Filtering (Keywords and Patterns)
  |   |
- |   [4a] Train Booking Detection  Keywords:TrainNumber,Train,Rail
+ |   [4a] Train Booking Detection  Keywords:TrainNumber,Train,Rail,Date,Time,Arrival,Departure
  |   |
- |   [4b] Air Booking Detection Keywords:Flights,Air,Reservation,Confirmation
+ |   [4b] Air Booking Detection Keywords:Flights,Air,Reservation,Confirmation,Airport,Date,Time,Arrival,Departure
  |   |
- |   [4c] Car Rental Booking Detection :Car Registeration,Confirmation,Booking,Reference number
+ |   [4c] Car Rental Booking Detection :Car Registeration,Confirmation,Booking,Reference number,Date,Time
  |   |
- |   [4d] Hotel Booking Detection :Booking,Reference,Reservation,Accomodation,Bed,Breakfast
+ |   [4d] Hotel Booking Detection :Booking,Reference,Reservation,Accomodation,Bed,Breakfast,Date,Time
  |
 [5] Parsing Identified Emails
  |
