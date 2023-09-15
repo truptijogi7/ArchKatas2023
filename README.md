@@ -8,7 +8,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - Srujana Shreevatsav
 - Akash Ranjan
 - [Trupti Jogi](https://www.linkedin.com/in/trupti-jogi/)
-- Raj Dugad
+- [Raj Dugad](https://www.linkedin.com/in/raj-dugad)
 
 
 ## Contents
@@ -16,6 +16,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Business Case](#business-case)
     - [Requirements](#requirements)
     - [Technical Constraints](#technical-constraints)
+- [Actors & User roles](#Actors-User-roles)
 
 ![characteristics](/Assets/architecture-styles-worksheet.png)
 *Figure 1 Architecture Characteristics*
@@ -35,21 +36,55 @@ The UI needs to be interactive and Rich and responsiveness on web and mobile dev
 
 The number of users per day 2M Weekly avergaing to approx 300k DAU and can go upto 15M at peak times like seasonal holidays,school vacations etc.Scale and Elasticity therefore are important to be factored into the design
 
-(1) Availability - The platform must allow users to connect with each other at any time of day or night as the app is international. And 5 mins per month ~60 mins Annual downtime will needa  highly available system of 99.99%.[Note :Not all services are critical and some microservices can be 99.9% available]
+1. Availability - The platform must allow users to connect with each other at any time of day or night as the app is international. And 5 mins per month ~60 mins Annual downtime will needa  highly available system of 99.99%.[Note :Not all services are critical and some microservices can be 99.9% available]
 
-(2) Responsiveness/Performance - The platform must handle requests quickly enough load the web portal within 800 ms and mobile under 1 sec.
+2. Responsiveness/Performance - The platform must handle requests quickly enough load the web portal within 800 ms and mobile under 1 sec.
 
-(3) Interoperability : Since the system interfaces with various airlines globally,rail networks,car rentals and social media API's,interoperability with systems that are both legacy and distributed with platform agnosticity needs to be built.
+3. Interoperability : Since the system interfaces with various airlines globally,rail networks,car rentals and social media API's,interoperability with systems that are both legacy and distributed with platform agnosticity needs to be built.
 
-(4) Scalability and Elasticity based on the Weekly user activity numbers given and also if the portal becomes popular,international demand needs to be supported.
+4. Scalability and Elasticity based on the Weekly user activity numbers given and also if the portal becomes popular,international demand needs to be supported.
 
-(5) Evolvability-Both the UI and interfaces need to be deisgned for future extendability and to support growth of the platform in the form of new regions/vendors/travel agencies onboarded.
+5. Evolvability-Both the UI and interfaces need to be deisgned for future extendability and to support growth of the platform in the form of new regions/vendors/travel agencies onboarded.
 
 ![characteristics](/Assets/Arch_characteristics.png)
 
 ## Implicit Characteristics
 **Cost**     Since it is an international app with several integrations with travel agencies/partners,costs to integrate with the platform must be kept low.
 **Security**  It is important that the application is secure from malicious attacks which could exploit vulnerable user locations/stalk individuals.
+
+## Actors & User roles
+
+Actors and their associated user roles for the next-generation online trip management dashboard:
+
+  • Travelers (End Users):
+      Travelers are the main users of the system. They use the platform to manage their travel reservations, view trip details, receive updates, and access various features such as sharing trip information across social medias and generating end-of-year summary reports.
+      
+  • System Administrators:
+      System administrators are responsible for managing and maintaining the overall system. Their roles include ensuring system uptime, handling technical issues, and managing user accounts and access permissions.
+      
+  • RoadWarrior Help Desk:
+      User Role: RoadWarrior Help Desk personnel assist travelers with any issues they encounter during their trips. They may provide support via the dashboard to resolve problems related to reservations, travel updates, or other travel-related concerns.
+      
+  • Transport Manager:
+      User Role: The Transport Manager is responsible for managing reservations and updates for all modes of transportation, including airlines, car rentals, and trains. They interface with the system to ensure that travel information for all types of transport is accurately reflected in the dashboard. This role handles the coordination and synchronization of transportation-related data across various transport modes.
+      
+  • Accommodation Manager:
+      User Role: The Accommodation Manager is responsible for managing hotel reservations and updates. They interact with the system to ensure that hotel-related travel information is accurately reflected in the dashboard.
+      
+  • (need or not ) Reservations (Booking Agents):
+      User Role: Booking agents may use the system to create and manage reservations on behalf of travelers. They have the responsibility to add, update, or delete existing reservations manually when required.
+      
+      
+  • Travel Analytics ( RoadWarriors):
+      User Role:This role involves analyzing data collected by RoadWarriors, such as cancellation and update frequency, travel locations, and trends. The insights derived from this analysis can be used to improve the dashboard and enhance the travel experience for users.
+      
+   
+  • Third-Party Travel Systems (e.g., SABRE, APOLLO):
+      These systems interface with the travel management dashboard to provide real-time updates on flight, hotel, and car rental reservations. The dashboard communicates with these systems to ensure users have up-to-date travel information.
+      
+  • Preferred Travel Agency:
+      The preferred travel agency is integrated into the system for quick problem resolution. Users can contact the agency through the platform for assistance with their travel-related issues.
+      
 
 ## Data Extractor
 
@@ -99,9 +134,4 @@ Cloud Infra from AWS planner.
 ## Deployment Strategy
 
 Need a deployment Diagram
-
-
-
-
-
 
