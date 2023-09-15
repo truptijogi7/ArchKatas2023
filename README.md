@@ -12,9 +12,10 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 
 
 ## Analysis
-  - [Problem Statement](./Analysis/input.md)
-  - [Functional Requirements](./Analysis/functional%20requirements.md)
-   - [Technical Capability required of platform](./Analysis/Technical%20Capability%20required%20of%20platform.md)
+  - [Problem Statement](./Analysis/1_problem%20statement.md)
+  - [Functional Requirements](./Analysis/2_functional%20requirements.md)
+  - [Assumptions](./Analysis/3_assumptions.md)
+   - [Technical Capability required of platform](./Analysis/4_technical%20Capability%20required%20of%20platform.md)
 
 ## Architecture
 - [Actors & User roles](/Solution/actors-user-roles.md)
