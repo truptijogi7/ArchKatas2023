@@ -16,7 +16,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Business Case](#business-case)
     - [Requirements](#requirements)
     - [Technical Constraints](#technical-constraints)
-- [Actors & User roles](#Actors-User-roles)
+- [Actors & User roles](#actors--user-roles)
 
 ![characteristics](/Assets/architecture-styles-worksheet.png)
 *Figure 1 Architecture Characteristics*
