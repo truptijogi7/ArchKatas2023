@@ -12,10 +12,11 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 
 
 ## Contents
-- [Introduction](#introduction)  
-- [Business Case](#business-case)
-    - [Requirements](#requirements)
-    - [Technical Constraints](#technical-constraints)
+- [Business Requirement](#business-requirement)
+    - [Functional Requirements](#functional-requirements)
+    - [Technical Capability required of platform](#technical-capability-required-of-platform)
+- [Architecture Characteristics](#architecture-characteristic)
+- [Implicit Characteristics](#implicit-characteristics)
 - [Actors & User roles](#actors--user-roles)
 
 ![characteristics](/Assets/architecture-styles-worksheet.png)
@@ -24,7 +25,9 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 ## Desired Architecture Characteristics
 Here we map technical requirements to associated architecture characteristics, which are ordered by importance. 
 
-## Business requirement
+## Business Requirement
+
+## Functional Requirements
 
 ## Technical capability required of platform
 
