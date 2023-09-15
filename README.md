@@ -69,22 +69,15 @@ Actors and their associated user roles for the next-generation online trip manag
       User Role: The Transport Manager is responsible for managing reservations and updates for all modes of transportation, including airlines, car rentals, and trains. They interface with the system to ensure that travel information for all types of transport is accurately reflected in the dashboard. This role handles the coordination and synchronization of transportation-related data across various transport modes.
       
   * Accommodation Manager:
-      User Role: The Accommodation Manager is responsible for managing hotel reservations and updates. They interact with the system to ensure that hotel-related travel information is accurately reflected in the dashboard.
-      
-  * (need or not ) Reservations (Booking Agents):
-      User Role: Booking agents may use the system to create and manage reservations on behalf of travelers. They have the responsibility to add, update, or delete existing reservations manually when required.
-      
-      
-  * Travel Analytics ( RoadWarriors):
-      User Role:This role involves analyzing data collected by RoadWarriors, such as cancellation and update frequency, travel locations, and trends. The insights derived from this analysis can be used to improve the dashboard and enhance the travel experience for users.
-      
+      User Role: The Accommodation Manager is responsible for managing hotel reservations and updates. They interact with the system to ensure that hotel-related travel information is accurately reflected in the dashboard.   
    
   * Third-Party Travel Systems (e.g., SABRE, APOLLO):
       These systems interface with the travel management dashboard to provide real-time updates on flight, hotel, and car rental reservations. The dashboard communicates with these systems to ensure users have up-to-date travel information.
       
   * Preferred Travel Agency:
       The preferred travel agency is integrated into the system for quick problem resolution. Users can contact the agency through the platform for assistance with their travel-related issues.
-      
+
+![Actor_usecase](/ArchDiagrams/Actor_usecase%20diagram.png)
 
 ## Data Extractor
 
