@@ -18,10 +18,10 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
    - [Technical Capability required of platform](./Analysis/4_technical%20Capability%20required%20of%20platform.md)
 
 ## Architecture
-- [Actors & User roles](/Solution/actors-user-roles.md)
-- [Architecture Characteristics](/Solution/architecture-characteristic.md)
-- [Implicit & Desired Characteristics](/Solution/implicit-characteristics.md)
-- [High-level Architecture](/Solution/high-level-architecture.md)
+- [Actors & User roles](/Solution/1_actors-user-roles.md)
+- [Architecture Characteristics](/Solution/2_architecture-characteristic.md)
+- [Implicit & Desired Characteristics](/Solution/3_implicit-characteristics.md)
+- [High-level Architecture](/Solution/4_high-level-architecture.md)
 
 
 ## Data Extractor
