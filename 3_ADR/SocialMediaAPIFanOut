@@ -1,0 +1,5 @@
+Issue:Trip sharing using social media API for specific friends
+Decision :Using graph for getting friend IDs(1st degree connections etc) and then getting user details from user db and then sharing trip info
+Status : Accepted
+Assumptions :1st degree contacts are considered.Followers are not considered as connections to ensure traveller privacy limited to close contacts.
+Constraints:Config needs to be changed if the followers are ot be updated.In case of very popular users having >1M followers etc fanout poses significant load on the social media system.
