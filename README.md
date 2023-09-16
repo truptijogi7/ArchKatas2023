@@ -99,7 +99,7 @@ It includes User Authentication for secure user access, the Travel Dashboard for
 # Database:
 The Database component stores essential data, including user information and reservation records.
 It ensures data persistence and retrieval for various system functions.
-[ADR](/3_ADR/DBDecision.md)
+[ADR for DB Design](3_ADR/DBDecision.md)
 
 # External Systems (Cloud Based):
 External Systems, represented as Cloud, symbolize interactions with external travel providers and systems.Global Distribution systems like SABRE,APOLLO have been considered for the design.
@@ -117,7 +117,7 @@ If a duplicate is detected, the system prevents the addition of the reservation.
 
 [Polling Service Logic ](2_Solution/Services/1_PollingService.md)
 
-[ADR](3_ADR/PollingForEmailCheck)
+[ADR for Polling Email](3_ADR/PollingForEmailCheck)
 
 # Reservation Flow:
 When a user performs CRUD operations on reservations (Create, Read, Update, Delete), the Travel Dashboard handles the user's request.
@@ -154,7 +154,8 @@ We will then store the extracted travel booking data in a database which will be
 
 **Trip Grouping**
 We are proposing to implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations,Traveller details).
-[ADR](3_ADR/TripGrouping)
+
+[ADR for Trip grouping](3_ADR/TripGrouping)
 For this 1. Group the bookings into trips and create a trip identifier(TraceId of Trip) that can be used across all microservices for tracking and tracability.
 
          2. Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations) in a readable manner from the above DB.
@@ -171,20 +172,21 @@ Static Information liek PNR,Name,Flight/Train Name,Travel Agency/Car rental name
 
 Dynamic information like Flight times/Gate chnages etc can be fetched on demand to reduce load time.
 
-[ADR](3_ADR/FastLoadofDashboard)
+[ADR for fast load of dashboard](3_ADR/FastLoadofDashboard)
 ## Notifications and Alerts:
 
 Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
-![Notification](/Assets/notificationSystem.png)
+![Notification System](/Assets/notificationSystem.png)
 
 
 Different types of channels to notify traveller as gate change/airline delays/price changes need to be communicated to avoid poor CX.
 
 So we have adopted an omni channel update method to ensure the notifications are not missed even when there is a network failure by choosing SMS as well.
-![Notification](/Assets/notificationService.png)
+![Notification Service](/Assets/notificationService.png)
+
 Types Supported:
 Android Push
-IOS Push
+IOS Push 
 SMS
 EMail
 
@@ -197,7 +199,7 @@ Since we have primary email configured during registeration we can send the emai
 
 **Rate Limiting**
 To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
-[ADR](3_ADR/NotificationOverload)
+[ADR for notification overload](3_ADR/NotificationOverload)
 
 # External Data Sources:
 These sources include third-party services like SABRE and APOLLO, which provide real-time travel updates.
