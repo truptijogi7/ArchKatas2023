@@ -99,7 +99,7 @@ It includes User Authentication for secure user access, the Travel Dashboard for
 # Database:
 The Database component stores essential data, including user information and reservation records.
 It ensures data persistence and retrieval for various system functions.
-![ADR](/_ADR/DBDecision.md)
+![ADR](3_ADR/DBDecision.md)
 
 # External Systems (Cloud Based):
 External Systems, represented as Cloud, symbolize interactions with external travel providers and systems.Global Distribution systems like SABRE,APOLLO have been considered for the design.
