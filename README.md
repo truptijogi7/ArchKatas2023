@@ -115,7 +115,7 @@ These systems provide real-time updates on travel information, such as flight st
 # The Travel Dashboard is the central component for managing travel reservations.
 It enables users to perform CRUD operations on reservations (Create, Read, Update, Delete) both manually and through real-time updates.
 Real-time updates from External Systems enhance reservation data with the latest information.
-![CRUD Details](/2_Solution/User-CRUD.md)
+[CRUD Details](/2_Solution/User-CRUD.md)
 
 # Duplicate Check Logic:
 This component is responsible for preventing the addition of duplicate reservations based on ticket IDs.
