@@ -234,16 +234,9 @@ They can choose which types of updates they want to receive and through which co
 External services like APOLLO can also send notifications to the Notification Service.
 These notifications can include special offers, promotions, or additional travel information.
 
-## CAP
-
-Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
-Consistency of user experience on both web and mobile platforms as well as consistency of the data writes/reads is important
-
-## Capacity Planning
-Cloud Infra from AWS/Azure/GCP planner.
-
-## Logical View
-![Logical Architecture](/Assets/Logical_Diagram.png)
+##Social Media API integration
+Have used 1st degree contacts and not followers to avoid a large hit when there are users with large number of followers,Also to protect privacy of the traveller.
+![ADR Social Media](3_ADR/SocialMediaAPIFanOut)
 
 ## Deployment Strategy
 
