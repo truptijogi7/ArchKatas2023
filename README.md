@@ -92,8 +92,11 @@ We will then store the extracted travel booking data in a database which will be
 We are proposing to implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations,Traveller details).
 
 For this 1. Group the bookings into trips and create a trip identifier(TraceId of Trip) that can be used across all microservices for tracking and tracability.
+
          2. Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations) in a readable manner from the above DB.
+         
          3.Check with the user if the displayed information is correct,else allow user to make changes and update the change into a database for a machine learning data model implementation in future.
+         
           4.If trips are not visible,provide forms/fields to update the infomration manually.Implementing additional Machine Learning principles could bring value by adding more key value pairs to dictionaries and analysing frequent tarveller/destination lists to group trips in future.
 
 
@@ -101,6 +104,7 @@ For this 1. Group the bookings into trips and create a trip identifier(TraceId o
 We also propose the use of a cache to pre fetch some of the trip information ahead of time.This can be a batch job running a few times a day and is configurable based on trip frequency and user preferences.
 
 Static Information liek PNR,Name,Flight/Train Name,Travel Agency/Car rental name etc can be localised with language using CDN and localisation.
+
 Dynamic information like Flight times/Gate chnages etc can be fetched on demand to reduce load time.
 
 ## Notifications and Alerts:
@@ -122,7 +126,7 @@ For Android we use FireBase Cloud Messaging and for SMS we can use Twilio or NEX
 
 Since we have primary email configured during registeration we can send the email both to primary and secondary emails(for avoiding single point of failure)
 
-Rate Limiting 
+**Rate Limiting**
 To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
 
 
