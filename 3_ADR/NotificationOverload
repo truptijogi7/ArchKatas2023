@@ -1,0 +1,7 @@
+Issue:High volume of notifications and loading notifications within few minutes or seconds of the change/update
+Decision :Using MQ and Streaming for ensuring there is no packet loss.Redundancy built in for MQ also.
+Status :Accepted
+Assumptions:All the microservices within the dashboard service subscribed to the change events will be notified and then push to mobile app/email/sms will be initiated by Notifications Manager.
+
+Constraints:Push disabled by app/device user will be a detriment hence sms also has been used.Pull is also supported and can be configured.
+Trade-off will be the number of channels on which the user gets notified will be high but this is still better than a missed flight/missed update.
