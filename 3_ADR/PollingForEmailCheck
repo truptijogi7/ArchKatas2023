@@ -1,0 +1,4 @@
+Issue:Polling for the email to check for travel related information
+Decision:Batch to run twice each day to check for any travel/trip related emails
+Status:Pending
+Assumptions:Runs in the background even if the app is not open/web portal is not open in browser
