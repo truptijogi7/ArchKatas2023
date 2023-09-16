@@ -34,6 +34,9 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 
 
 ## Architecture Characteristic
+
+
+[Arch Worksheet](Assets/architecture-styles-worksheet.png)
 The RoadWarriers App is designed to be a centralized dashboard for all the trips/bookings made by the traveller for air,train,car rental and Hotel bookings by interacting with various preferred travel agencies
 
 The UI needs to be interactive and Rich and responsiveness on web and mobile device is high
