@@ -21,7 +21,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Actors & User roles](/2_Solution/1_actors-user-roles.md)
 - [Architecture Characteristics](/2_Solution/2_architecture-characteristic.md)
 - [Implicit & Desired Characteristics](/2_Solution/3_implicit-characteristics.md)
-- [High-level Architecture](/2_Solution/4_high-level-architecture.md)
+- [High-level Architecture](/Assets/Road_Warriors_HLD.png)
 
 ## Services & Algorithms
 - [Email polling Algo](/2_Solution/Services/1_PollingService.md)
