@@ -29,7 +29,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Year End Summary Reports](/2_Solution/Services/3_Summary.md)
 - [Reporting and Analytics Service](/2_Solution/Services/4_Analytics.md)
 
-## Cost Anaysis
+## Cost Anaysis(Monthly)
  - [Summary of Estimated Cost](#cost-analysis)
 
 
@@ -77,9 +77,6 @@ An estimated AWS cost analysis per month for 5 million Monthly active Users(2 mi
 ## Logical View
 ![Logical Architecture](/Assets/Logical_Diagram.png)
 
-## Physical View
-
-
 ## Dashboard Presentation:
 
 Develop a user-friendly dashboard where users can view their trips.
@@ -102,20 +99,25 @@ It includes User Authentication for secure user access, the Travel Dashboard for
 # Database:
 The Database component stores essential data, including user information and reservation records.
 It ensures data persistence and retrieval for various system functions.
+![ADR](/_ADR/DBDecision.md)
 
-# External Systems (Cloud):
-External Systems, represented as Cloud, symbolize interactions with external travel providers and systems.
+# External Systems (Cloud Based):
+External Systems, represented as Cloud, symbolize interactions with external travel providers and systems.Global Distribution systems like SABRE,APOLLO have been considered for the design.
 These systems provide real-time updates on travel information, such as flight statuses and hotel bookings.
-Travel Dashboard:
 
 # The Travel Dashboard is the central component for managing travel reservations.
 It enables users to perform CRUD operations on reservations (Create, Read, Update, Delete) both manually and through real-time updates.
 Real-time updates from External Systems enhance reservation data with the latest information.
+![CRUD Details](/2_Solution/User-CRUD.md)
 
 # Duplicate Check Logic:
 This component is responsible for preventing the addition of duplicate reservations based on ticket IDs.
 It is integrated with the Travel Dashboard to validate new reservations against existing ones.
 If a duplicate is detected, the system prevents the addition of the reservation.
+
+![Polling Service Logic ](2_Solution/Services/1_PollingService.md)
+
+![ADR](3_ADR/PollingForEmailCheck)
 
 # Reservation Flow:
 When a user performs CRUD operations on reservations (Create, Read, Update, Delete), the Travel Dashboard handles the user's request.
@@ -146,16 +148,13 @@ Rail Dictionary (e.g., train name, departure, arrival, date, time).
 Car rental Dictionary (e.g., rental agency, pickup, return location, date, time).
 Hotel Dictionary(e.g. , ReservationId,Bed,Breakfast,City,Date,time).
 
-<Link to Diagram/Algo>
-
 
 **Data Storage**
-We will then store the extracted travel booking data in a database which will be used for faster retrieval during Traveller Feed generation on dashboard. You may need separate tables for different types of bookings (air, rail, car).
-
+We will then store the extracted travel booking data in a database which will be used for faster retrieval during Traveller Feed generation on dashboard. We will need separate tables for different types of bookings (air, rail, car).
 
 **Trip Grouping**
 We are proposing to implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations,Traveller details).
-
+![ADR](3_ADR/TripGrouping)
 For this 1. Group the bookings into trips and create a trip identifier(TraceId of Trip) that can be used across all microservices for tracking and tracability.
 
          2. Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations) in a readable manner from the above DB.
@@ -172,15 +171,17 @@ Static Information liek PNR,Name,Flight/Train Name,Travel Agency/Car rental name
 
 Dynamic information like Flight times/Gate chnages etc can be fetched on demand to reduce load time.
 
+![ADR](3_ADR/FastLoadofDashboard)
 ## Notifications and Alerts:
 
 Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
 ![Notification](/Assets/notificationSystem.png)
 
+
 Different types of channels to notify traveller as gate change/airline delays/price changes need to be communicated to avoid poor CX.
 
 So we have adopted an omni channel update method to ensure the notifications are not missed even when there is a network failure by choosing SMS as well.
-
+![Notification](/Assets/notificationService.png)
 Types Supported:
 Android Push
 IOS Push
@@ -196,6 +197,7 @@ Since we have primary email configured during registeration we can send the emai
 
 **Rate Limiting**
 To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
+![ADR](3_ADR/NotificationOverload)
 
 # External Data Sources:
 These sources include third-party services like SABRE and APOLLO, which provide real-time travel updates.
@@ -232,8 +234,6 @@ They can choose which types of updates they want to receive and through which co
 External services like APOLLO can also send notifications to the Notification Service.
 These notifications can include special offers, promotions, or additional travel information.
 
-
-
 ## CAP
 
 Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
@@ -244,13 +244,6 @@ Cloud Infra from AWS/Azure/GCP planner.
 
 ## Logical View
 ![Logical Architecture](/Assets/Logical_Diagram.png)
-
-## Physical View
-
-## ADR
-
-1. [ADR Template](/3_ADR/1_ADR.md)
-
 
 ## Deployment Strategy
 
