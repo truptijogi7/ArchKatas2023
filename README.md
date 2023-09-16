@@ -25,7 +25,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 
 ## Services & Algorithms
 - [Email polling Algo](/2_Solution/Services/1_PollingService.md)
-- [Email filter & whitelist Algo](/2_Solution/Services/2_EmailFilterAlgo.md)
+
 - [Year End Summary Reports](/2_Solution/Services/3_Summary.md)
 - [Reporting and Analytics Service](/2_Solution/Services/4_Analytics.md)
 
