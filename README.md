@@ -23,6 +23,9 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Implicit & Desired Characteristics](/2_Solution/3_implicit-characteristics.md)
 - [High-level Architecture](/2_Solution/4_high-level-architecture.md)
 
+## Services & Algorithms
+- [Email polling Algo](/2_Solution/Algo/1_PollingService.md)
+- [Email filter & whitelist Algo](/2_Solution/Algo/2_EmailFilterAlgo.md)
 
 ## Data Extractor
 
@@ -67,6 +70,11 @@ Cloud Infra from AWS/Azure/GCP planner.
 ## Logical View
 ![Logical Architecture](/Assets/Logical%20Arch)
 ## Physical View
+
+## ADR
+
+1. [ADR Template](/3_ADR/1_ADR.md)
+
 
 ## Deployment Strategy
 
