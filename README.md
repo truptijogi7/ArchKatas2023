@@ -46,6 +46,19 @@ The number of users per day 2M Weekly avergaing to approx 300k DAU and can go up
 
 (5) Evolvability-Both the UI and interfaces need to be deisgned for future extendability and to support growth of the platform in the form of new regions/vendors/travel agencies onboarded.
 
+## CAP
+
+Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
+Consistency of user experience on both web and mobile platforms as well as consistency of the data writes/reads is important
+
+## Capacity Planning
+Cloud Infra from AWS/Azure/GCP planner.
+
+## Logical View
+![Logical Architecture](/Assets/Logical_Diagram.png)
+
+## Physical View
+
 
 ## Dashboard Presentation:
 
@@ -57,28 +70,41 @@ Provide options to edit, delete, or add new bookings to the trip.
 
 Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
 
+
 ## Data Extractor
 
+We will use a dictionary to search email as well as to group trip's which have similar trip id's together.
+
 Extract relevant details from the identified emails, including:
-Flight details (e.g., airline, flight number, departure, arrival, date, time).
-Rail details (e.g., train name, departure, arrival, date, time).
-Car rental details (e.g., rental agency, pickup, return location, date, time).
+Flight Dictionary (e.g., airline, flight number, departure, arrival, date, time).
+Rail Dictionary (e.g., train name, departure, arrival, date, time).
+Car rental Dictionary (e.g., rental agency, pickup, return location, date, time).
+Hotel Dictionary(e.g. , ReservationId,Bed,Breakfast,City,Date,time).
 
 <Link to Diagram/Algo>
 
+
 **Data Storage**
-Store the extracted travel booking data in a database. You may need separate tables for different types of bookings (air, rail, car).
+We will then store the extracted travel booking data in a database which will be used for faster retrieval during Traveller Feed generation on dashboard. You may need separate tables for different types of bookings (air, rail, car).
+
 
 **Trip Grouping**
-Implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations).
-Group the bookings into trips and create a trip identifier.
+We are proposing to implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations,Traveller details).
 
-Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations).
+For this 1. Group the bookings into trips and create a trip identifier(TraceId of Trip) that can be used across all microservices for tracking and tracability.
+         2. Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations) in a readable manner from the above DB.
+         3.Check with the user if the displayed information is correct,else allow user to make changes and update the change into a database for a machine learning data model implementation in future.
+          4.If trips are not visible,provide forms/fields to update the infomration manually.Implementing additional Machine Learning principles could bring value by adding more key value pairs to dictionaries and analysing frequent tarveller/destination lists to group trips in future.
 
 
+**Pre-fetch Cache**
+We also propose the use of a cache to pre fetch some of the trip information ahead of time.This can be a batch job running a few times a day and is configurable based on trip frequency and user preferences.
+
+Static Information liek PNR,Name,Flight/Train Name,Travel Agency/Car rental name etc can be localised with language using CDN and localisation.
+Dynamic information like Flight times/Gate chnages etc can be fetched on demand to reduce load time.
 
 ## Notifications and Alerts:
-
+<Add link to Notification Service>
 Different types of channels to notify traveller as gate change/airline delays/price changes need to be communicated to avoid poor CX.
 
 So we have adopted an omni channel update method to ensure the notifications are not missed even when there is a network failure by choosing SMS as well.
@@ -99,22 +125,6 @@ Since we have primary email configured during registeration we can send the emai
 Rate Limiting 
 To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
 
-
-
-
-
-## CAP
-
-Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
-Consistency of user experience on both web and mobile platforms as well as consistency of the data writes/reads is important
-
-## Capacity Planning
-Cloud Infra from AWS/Azure/GCP planner.
-
-## Logical View
-![Logical Architecture](/Assets/Logical_Diagram.png)
-
-## Physical View
 
 ## ADR
 
