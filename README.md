@@ -66,12 +66,12 @@ Develop a user-friendly dashboard where users can view their trips.
 
 Provide options to edit, delete, or add new bookings to the trip.
 
-## User Preferences:
+**User Preferences Storage**
 
 Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
 
 
-## Data Extractor
+**Data Extractor**
 
 We will use a dictionary to search email as well as to group trip's which have similar trip id's together.
 
