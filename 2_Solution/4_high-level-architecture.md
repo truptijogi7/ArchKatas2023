@@ -1,5 +1,7 @@
 ## High Level Architecture
 
 
-![characteristics](Assets/RoadWarriors_HLD.png)
-*Figure 1 -  High Level Design*
+![High Level Design of the System](Assets/Road_Warriors_HLD.png)
+
+
+
