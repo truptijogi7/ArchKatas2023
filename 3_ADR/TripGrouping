@@ -1,0 +1,6 @@
+Issue:Grouping trip together poses a challenge,it might not be accurate leading to poor CX.
+Decision:Group trips using relationships like cities/destinations,dates,nearest neighbour for car rental or connecting rail/connecting flights and tracing a return trip along the same parameters
+Usage of graph and RDBMS for saving trip info
+Status:Pending
+Assumptions:User will be presented with option to check for accuracy and report which we can use to add to the data dictionary created for train/flights/car rental and hotels for improving accuracy
+COnstraints:Overhead of querying 2 DBs
