@@ -1,0 +1,5 @@
+Issue: Fast load of Dashboard on mobile and web
+Decision: Using Pre fecth cache logic for static information while allowing real time changes to be reflected for gate or flight/rail changes mitigating staleness of data
+Status:Accepted
+Assumptions : Cache can be invalidated every time a Change data capture event is detected in the Database for the associated trip by comapring with previously stored data in json/xml/yaml format 
+Constraints:
