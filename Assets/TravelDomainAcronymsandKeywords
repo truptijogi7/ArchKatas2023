@@ -1,1 +1,42 @@
+Air Travel:
 
+ATC: Air Traffic Control
+TSA: Transportation Security Administration
+FAA: Federal Aviation Administration
+IATA: International Air Transport Association
+ICAO: International Civil Aviation Organization
+AOG: Aircraft on Ground
+PNR: Passenger Name Record
+ETD: Estimated Time of Departure
+ETA: Estimated Time of Arrival
+RFP: Request for Proposal
+
+
+Global Distribution Systems (GDS):
+
+GDS: Global Distribution System
+CRS: Computer Reservation System
+PSS: Passenger Service System
+PNR: Passenger Name Record (used in both air travel and GDS)
+API: Application Programming Interface (used in the context of accessing GDS systems)
+APIs:
+
+API: Application Programming Interface
+REST: Representational State Transfer
+SOAP: Simple Object Access Protocol
+JSON: JavaScript Object Notation
+XML: Extensible Markup Language
+
+Rail:
+
+Amtrak: National Railroad Passenger Corporation (USA)
+TGV: Train à Grande Vitesse (High-Speed Train in France)
+ICE: InterCityExpress (High-Speed Train in Germany)
+JR: Japan Railways (Japan)
+Eurostar: High-Speed Train Service between Europe and the UK
+IRCTC: Indian Railway Catering and Tourism Corporation (India)
+Hotel Bookings:
+
+OTA: Online Travel Agency
+B&B: Bed and Breakfast
+AC: Air Conditioning (a common hotel amenity)
