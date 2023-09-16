@@ -5,7 +5,7 @@ ArchKatas2023 - Next generation online trip management dashboard by The Road War
 This is a team submission for O'Reilly [Architecture Katas fall 2023](https://learning.oreilly.com/featured/architectural-katas/).
 
 # Team Members:  
-- Srujana Shreevatsav (https://www.linkedin.com/in/srujanasrivatsav/)
+- [Srujana Shreevatsav](https://www.linkedin.com/in/srujanasrivatsav/)
 - Akash Ranjan
 - [Trupti Jogi](https://www.linkedin.com/in/trupti-jogi/)
 - [Raj Dugad](https://www.linkedin.com/in/raj-dugad)
@@ -15,7 +15,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
   - [Problem Statement](./1_Analysis/1_problem%20statement.md)
   - [Functional Requirements](./1_Analysis/2_functional%20requirements.md)
   - [Assumptions](./1_Analysis/3_assumptions.md)
-   - [Technical Capability required of platform](./1_Analysis/4_technical%20Capability%20required%20of%20platform.md)
+  - [Technical Capability required of platform](./1_Analysis/4_technical%20Capability%20required%20of%20platform.md)
 
 ## Architecture
 - [Actors & User roles](/2_Solution/1_actors-user-roles.md)
