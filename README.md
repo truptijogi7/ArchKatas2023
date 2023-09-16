@@ -21,6 +21,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Actors & User roles](/Solution/actors-user-roles.md)
 - [Architecture Characteristics](/Solution/architecture-characteristic.md)
 - [Implicit & Desired Characteristics](/Solution/implicit-characteristics.md)
+- [High-level Architecture](/Solution/high-level-architecture.md)
 
 
 ## Data Extractor
