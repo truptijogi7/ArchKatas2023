@@ -1,7 +1,7 @@
 ## High Level Architecture
 
 
-![High Level Design of the System](Assets/Road_Warriors_HLD.png)
+[High Level Design](Assets/Road_Warriors_HLD.png)
 
 
 
