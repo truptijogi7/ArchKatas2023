@@ -90,6 +90,51 @@ Provide options to edit, delete, or add new bookings to the trip.
 
 Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
 
+This architecture diagram outlines the components and interactions of a travel management system, focusing on user interaction, CRUD (Create, Read, Update, Delete) operations for reservations, real-time updates from external systems, and duplicate reservation prevention based on ticket IDs. Here's a theory breakdown of the architecture:
+
+**User Interface(CRUD)**:
+
+The User Interface represents the front-end component of the system where users interact with the travel management system.
+It includes User Authentication for secure user access, the Travel Dashboard for managing reservations, and the Reports Generator for generating travel reports.
+
+![CRUD UML Diagram](/Assets/User-CRUD.png)
+
+# Database:
+The Database component stores essential data, including user information and reservation records.
+It ensures data persistence and retrieval for various system functions.
+
+# External Systems (Cloud):
+External Systems, represented as Cloud, symbolize interactions with external travel providers and systems.
+These systems provide real-time updates on travel information, such as flight statuses and hotel bookings.
+Travel Dashboard:
+
+# The Travel Dashboard is the central component for managing travel reservations.
+It enables users to perform CRUD operations on reservations (Create, Read, Update, Delete) both manually and through real-time updates.
+Real-time updates from External Systems enhance reservation data with the latest information.
+
+# Duplicate Check Logic:
+This component is responsible for preventing the addition of duplicate reservations based on ticket IDs.
+It is integrated with the Travel Dashboard to validate new reservations against existing ones.
+If a duplicate is detected, the system prevents the addition of the reservation.
+
+# Reservation Flow:
+When a user performs CRUD operations on reservations (Create, Read, Update, Delete), the Travel Dashboard handles the user's request.
+The Duplicate Check Logic is triggered when adding a new reservation. It checks if the new reservation has the same ticket ID as an existing one.
+If a duplicate is found, the system prevents the addition of the reservation and provides feedback to the user.
+If it's a valid reservation, the Travel Dashboard updates the reservation data in the database.
+
+# Interactions:
+Users interact with the User Interface, which handles login/logout and provides a dashboard for reservation management and report generation.
+Real-time updates from External Systems enhance the reservation data with the latest information from travel providers.
+The Database stores user data and reservation records, ensuring data integrity.
+The Travel Dashboard is the core component that processes user requests and ensures reservations are managed efficiently.
+
+**Benefits**:
+This architecture ensures data integrity by preventing duplicate reservations based on ticket IDs.
+Users have full control over their reservations with the ability to manually add, update, or delete them.
+Real-time updates complement manual reservation management for a comprehensive travel dashboard.
+This architecture provides a clear and structured design for a travel management system, allowing users to efficiently manage their reservations while maintaining data accuracy. It also seamlessly integrates real-time updates to keep travel information up-to-date.
+
 
 **Data Extractor**
 
@@ -128,7 +173,10 @@ Static Information liek PNR,Name,Flight/Train Name,Travel Agency/Car rental name
 Dynamic information like Flight times/Gate chnages etc can be fetched on demand to reduce load time.
 
 ## Notifications and Alerts:
-<Add link to Notification Service>
+
+Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
+![Notification](/Assets/notificationSystem.png)
+
 Different types of channels to notify traveller as gate change/airline delays/price changes need to be communicated to avoid poor CX.
 
 So we have adopted an omni channel update method to ensure the notifications are not missed even when there is a network failure by choosing SMS as well.
@@ -149,6 +197,55 @@ Since we have primary email configured during registeration we can send the emai
 **Rate Limiting**
 To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
 
+# External Data Sources:
+These sources include third-party services like SABRE and APOLLO, which provide real-time travel updates.
+The Notification Service can subscribe to these sources to receive updates.
+
+# Communication Services:
+SMS, Email, Firebase Cloud Messaging (FCM), and Apple Push Notification Service (APNs) are communication channels used for delivering notifications to users.
+
+# External Data Sources Integration:
+The Notification Service integrates with external data sources, such as SABRE and APOLLO, to receive real-time travel updates.
+It subscribes to these sources and listens for updates.
+
+# Notification Generation:
+When an update is received from an external source, the Notification Service generates a notification based on the update's content.
+The notification can include details like flight delays, gate changes, hotel reservations, and more.
+
+# Notification Delivery Options:
+The Notification Service determines how to deliver the notification to the user.
+It may use various communication channels, such as SMS, Email, FCM, or APNs, based on user preferences and device capabilities.
+
+# Travel Dashboard Interaction:
+The Travel Dashboard acts as the user's main interface with the system.
+It constantly checks for new notifications from the Notification Service.
+
+# Notification Display:
+When a new notification arrives, the Travel Dashboard displays it to the user in a user-friendly format.
+Users can see real-time updates related to their travel plans directly on the dashboard.
+
+# User Preferences:
+Users can configure their notification preferences through the User Interface.
+They can choose which types of updates they want to receive and through which communication channels (SMS, Email, FCM, APNs).
+
+# Third-Party Notifications:
+External services like APOLLO can also send notifications to the Notification Service.
+These notifications can include special offers, promotions, or additional travel information.
+
+
+
+## CAP
+
+Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
+Consistency of user experience on both web and mobile platforms as well as consistency of the data writes/reads is important
+
+## Capacity Planning
+Cloud Infra from AWS/Azure/GCP planner.
+
+## Logical View
+![Logical Architecture](/Assets/Logical_Diagram.png)
+
+## Physical View
 
 ## ADR
 
