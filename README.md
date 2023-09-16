@@ -77,11 +77,15 @@ An estimated AWS cost analysis per month for 5 million Monthly active Users(2 mi
 ## Logical View
 ![Logical Architecture](/Assets/Logical_Diagram.png)
 
+## High Level Design
+
+
 ## Dashboard Presentation:
 
 Develop a user-friendly dashboard where users can view their trips.
 
 Provide options to edit, delete, or add new bookings to the trip.
+
 
 **User Preferences Storage**
 
@@ -181,6 +185,8 @@ Implement notifications/alerts to inform users when new bookings are detected or
 Different types of channels to notify traveller as gate change/airline delays/price changes need to be communicated to avoid poor CX.
 
 So we have adopted an omni channel update method to ensure the notifications are not missed even when there is a network failure by choosing SMS as well.
+
+
 ![Notification Service](Assets/NotificationService.png)
 
 Types Supported:
