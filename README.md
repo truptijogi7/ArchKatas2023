@@ -24,8 +24,10 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [High-level Architecture](/2_Solution/4_high-level-architecture.md)
 
 ## Services & Algorithms
-- [Email polling Algo](/2_Solution/Algo/1_PollingService.md)
-- [Email filter & whitelist Algo](/2_Solution/Algo/2_EmailFilterAlgo.md)
+- [Email polling Algo](/2_Solution/Services/1_PollingService.md)
+- [Email filter & whitelist Algo](/2_Solution/Services/2_EmailFilterAlgo.md)
+- [Reporting and Analytics Service](/2_Solution/Services/4_Analytics.md)
+
 ## Architecture Characteristic
 The RoadWarriers App is designed to be a centralized dashboard for all the trips/bookings made by the traveller for air,train,car rental and Hotel bookings by interacting with various preferred travel agencies
 
