@@ -12,16 +12,16 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 
 
 ## Analysis
-  - [Problem Statement](./Analysis/1_problem%20statement.md)
-  - [Functional Requirements](./Analysis/2_functional%20requirements.md)
-  - [Assumptions](./Analysis/3_assumptions.md)
-   - [Technical Capability required of platform](./Analysis/4_technical%20Capability%20required%20of%20platform.md)
+  - [Problem Statement](./1_Analysis/1_problem%20statement.md)
+  - [Functional Requirements](./1_Analysis/2_functional%20requirements.md)
+  - [Assumptions](./1_Analysis/3_assumptions.md)
+   - [Technical Capability required of platform](./1_Analysis/4_technical%20Capability%20required%20of%20platform.md)
 
 ## Architecture
-- [Actors & User roles](/Solution/1_actors-user-roles.md)
-- [Architecture Characteristics](/Solution/2_architecture-characteristic.md)
-- [Implicit & Desired Characteristics](/Solution/3_implicit-characteristics.md)
-- [High-level Architecture](/Solution/4_high-level-architecture.md)
+- [Actors & User roles](/2_Solution/1_actors-user-roles.md)
+- [Architecture Characteristics](/2_Solution/2_architecture-characteristic.md)
+- [Implicit & Desired Characteristics](/2_Solution/3_implicit-characteristics.md)
+- [High-level Architecture](/2_Solution/4_high-level-architecture.md)
 
 
 ## Data Extractor
