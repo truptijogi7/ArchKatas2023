@@ -93,7 +93,7 @@ Consistency of user experience on both web and mobile platforms as well as consi
 Cloud Infra from AWS/Azure/GCP planner.
 
 ## Logical View
-![Logical Architecture](/Assets/Logical%20Arch)
+![Logical Architecture](/Assets/Logical_Diagram.png)
 
 ## Physical View
 
