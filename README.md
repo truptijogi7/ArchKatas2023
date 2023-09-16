@@ -79,8 +79,27 @@ Display each trip with a summary of the bookings (flights, trains, car rentals) 
 
 ## Notifications and Alerts:
 
-Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
-![Notification](/Assets/Notification%20Draft.png)
+Different types of channels to notify traveller as gate change/airline delays/price changes need to be communicated to avoid poor CX.
+
+So we have adopted an omni channel update method to ensure the notifications are not missed even when there is a network failure by choosing SMS as well.
+
+Types Supported:
+Android Push
+IOS Push
+SMS
+EMail
+
+Here we use a publish-Subscribe Pattern to support notifications from external API's /interfaces.
+Once a provider sends notifications to Apple Push notification Service(APNS) using some device tokena nd payload,a remote service provided by Apple can be used to propogate the actual message to IOS devices.
+
+For Android we use FireBase Cloud Messaging and for SMS we can use Twilio or NEXMO like third party of local mobile service provider of the country where the traveller is located.
+
+Since we have primary email configured during registeration we can send the email both to primary and secondary emails(for avoiding single point of failure)
+
+Rate Limiting 
+To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
+
+
 
 
 
