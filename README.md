@@ -99,7 +99,7 @@ It includes User Authentication for secure user access, the Travel Dashboard for
 # Database:
 The Database component stores essential data, including user information and reservation records.
 It ensures data persistence and retrieval for various system functions.
-![ADR](3_ADR/DBDecision.md)
+[ADR](/3_ADR/DBDecision.md)
 
 # External Systems (Cloud Based):
 External Systems, represented as Cloud, symbolize interactions with external travel providers and systems.Global Distribution systems like SABRE,APOLLO have been considered for the design.
@@ -115,9 +115,9 @@ This component is responsible for preventing the addition of duplicate reservati
 It is integrated with the Travel Dashboard to validate new reservations against existing ones.
 If a duplicate is detected, the system prevents the addition of the reservation.
 
-![Polling Service Logic ](2_Solution/Services/1_PollingService.md)
+[Polling Service Logic ](2_Solution/Services/1_PollingService.md)
 
-![ADR](3_ADR/PollingForEmailCheck)
+[ADR](3_ADR/PollingForEmailCheck)
 
 # Reservation Flow:
 When a user performs CRUD operations on reservations (Create, Read, Update, Delete), the Travel Dashboard handles the user's request.
@@ -154,7 +154,7 @@ We will then store the extracted travel booking data in a database which will be
 
 **Trip Grouping**
 We are proposing to implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations,Traveller details).
-![ADR](3_ADR/TripGrouping)
+[ADR](3_ADR/TripGrouping)
 For this 1. Group the bookings into trips and create a trip identifier(TraceId of Trip) that can be used across all microservices for tracking and tracability.
 
          2. Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations) in a readable manner from the above DB.
@@ -171,7 +171,7 @@ Static Information liek PNR,Name,Flight/Train Name,Travel Agency/Car rental name
 
 Dynamic information like Flight times/Gate chnages etc can be fetched on demand to reduce load time.
 
-![ADR](3_ADR/FastLoadofDashboard)
+[ADR](3_ADR/FastLoadofDashboard)
 ## Notifications and Alerts:
 
 Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
@@ -197,7 +197,7 @@ Since we have primary email configured during registeration we can send the emai
 
 **Rate Limiting**
 To Avoid overwhelming the user with too many notifications via multiple channels,we can limit the notifications and in case of failure of delivery,resend logic can be applied.
-![ADR](3_ADR/NotificationOverload)
+[ADR](3_ADR/NotificationOverload)
 
 # External Data Sources:
 These sources include third-party services like SABRE and APOLLO, which provide real-time travel updates.
@@ -236,7 +236,7 @@ These notifications can include special offers, promotions, or additional travel
 
 ##Social Media API integration
 Have used 1st degree contacts and not followers to avoid a large hit when there are users with large number of followers,Also to protect privacy of the traveller.
-![ADR Social Media](3_ADR/SocialMediaAPIFanOut)
+[ADR Social Media](3_ADR/SocialMediaAPIFanOut)
 
 ## Deployment Strategy
 
