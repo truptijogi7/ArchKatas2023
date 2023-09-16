@@ -1,6 +1,4 @@
-# Analytics & Reporting
-
-## Description
+## Analytics & Reporting
 
 Analytics Engine is responsible for all various analytical reports based on users trips data. From this service, System Admin can generate reports in the format of graphs and charts for 4 major categories:
 1. Location
