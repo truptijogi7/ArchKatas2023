@@ -51,6 +51,7 @@ Provide options to edit, delete, or add new bookings to the trip.
 ## Notifications and Alerts:
 
 Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
+![Notification](/Assets/Notification%20Draft.png)
 ## User Preferences:
 
 Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
@@ -64,10 +65,10 @@ Consistency of user experience on both web and mobile platforms as well as consi
 Cloud Infra from AWS/Azure/GCP planner.
 
 ## Logical View
-
+![Logical Architecture](/Assets/Logical%20Arch)
 ## Physical View
 
 ## Deployment Strategy
 
-Need a deployment Diagram
+![Deployment Diagram](/Assets/Deployment)
 

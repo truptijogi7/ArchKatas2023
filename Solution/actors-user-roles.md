@@ -23,4 +23,4 @@ Actors and their associated user roles for the next-generation online trip manag
   * Preferred Travel Agency:
       The preferred travel agency is integrated into the system for quick problem resolution. Users can contact the agency through the platform for assistance with their travel-related issues.
 
-![Actor_usecase](/ArchDiagrams/Actor_usecase%20diagram.png)
+![Actor_usecase](/Assets/Actor_usecase%20diagram.png)
