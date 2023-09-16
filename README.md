@@ -29,6 +29,10 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 - [Year End Summary Reports](/2_Solution/Services/3_Summary.md)
 - [Reporting and Analytics Service](/2_Solution/Services/4_Analytics.md)
 
+## Cost Anaysis
+ - [Summary of Estimated Cost](#cost-analysis)
+
+
 ## Architecture Characteristic
 The RoadWarriers App is designed to be a centralized dashboard for all the trips/bookings made by the traveller for air,train,car rental and Hotel bookings by interacting with various preferred travel agencies
 
@@ -51,8 +55,24 @@ The number of users per day 2M Weekly avergaing to approx 300k DAU and can go up
 Availability of the platform to a large degree and critical functions like Trip detail viewing/Airline Gate changes or updates cannot be missed by any traveller
 Consistency of user experience on both web and mobile platforms as well as consistency of the data writes/reads is important
 
-## Capacity Planning
-Cloud Infra from AWS/Azure/GCP planner.
+## Cost Analysis
+Actual cost of cloud services depends on implementation specific details such as network ingress/egress, CPU and memory usage etc, it can only be determined after building and staging the services on the clould platform.
+
+An estimated AWS cost analysis per month for 5 million Monthly active Users(2 million per week), obtained by pricing calculators for individual services
+
+| Service | Usage | Cost |
+| ----------- | ----------- | ----------: |
+| Amazon CloudFront | 2 images per active user per month stores 5000GB per month |$430 |
+| Application Load Balancer | 25 GB processed bytes per month * 0.00136986 months in an hour | $33.85 |
+| AWS Lambda | 25 million requests per month with 256 MB memory x 0.0009765625 GB storage | $50.22|
+| Amazon Simple Queue Service (SQS) | 1 million requests per month | $0 |
+| Amazon ElastiCache | 3 instance(s) x 0.311 USD hourly x (100 / 100 Utilized/Month) x 730 hours in a month | $681.09 |
+| Amazon Neptune(Graph DB) | 1 instance(s) x 0.348 USD hourly x (100 / 100 Utilized/Month) x 730 hours in a month | $298.04 |
+| Amazon RDS for PostgreSQL | General Purpose SSD (gp2), Storage amount (30 GB), Instance Type (db.m5d.xlarge)  | $662.44 |
+| S3 Glacier Deep Archive | 5 GB per month / 0.015625 GB average item size | $6.03 |
+| Amazon CloudWatch | 25,000,000 requests x 0.00001 USD | $265.0015 |
+| Total | | **$2426.67** |
+
 
 ## Logical View
 ![Logical Architecture](/Assets/Logical_Diagram.png)
