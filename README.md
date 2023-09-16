@@ -82,6 +82,7 @@ An estimated AWS cost analysis per month for 5 million Monthly active Users(2 mi
 
 ## High Level Design
 
+![HLD](Assets/Road_Warriors_HLD.png)
 
 ## Dashboard Presentation:
 
