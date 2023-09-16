@@ -1,0 +1,4 @@
+Issue:Fetching updates for change data capture for flight/gate/update info
+Decision:Both Batch and real time configuration to be allowed in the app for fetching info from SABRE/Apollo API's
+Status:Accepted
+Assumptions:Availability of the API's is assumed to be very high ~99.999
