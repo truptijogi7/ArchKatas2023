@@ -5,7 +5,7 @@ ArchKatas2023 - Next generation online trip management dashboard by The Road War
 This is a team submission for O'Reilly [Architecture Katas fall 2023](https://learning.oreilly.com/featured/architectural-katas/).
 
 # Team Members:  
-- Srujana Shreevatsav
+- Srujana Shreevatsav (https://www.linkedin.com/in/srujanasrivatsav/)
 - Akash Ranjan
 - [Trupti Jogi](https://www.linkedin.com/in/trupti-jogi/)
 - [Raj Dugad](https://www.linkedin.com/in/raj-dugad)
@@ -45,6 +45,20 @@ The number of users per day 2M Weekly avergaing to approx 300k DAU and can go up
 (4) Scalability and Elasticity based on the Weekly user activity numbers given and also if the portal becomes popular,international demand needs to be supported.
 
 (5) Evolvability-Both the UI and interfaces need to be deisgned for future extendability and to support growth of the platform in the form of new regions/vendors/travel agencies onboarded.
+
+## IMplicit Characteristics
+
+
+## Dashboard Presentation:
+
+Develop a user-friendly dashboard where users can view their trips.
+
+Provide options to edit, delete, or add new bookings to the trip.
+
+## User Preferences:
+
+Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
+
 ## Data Extractor
 
 Extract relevant details from the identified emails, including:
@@ -53,9 +67,9 @@ Rail details (e.g., train name, departure, arrival, date, time).
 Car rental details (e.g., rental agency, pickup, return location, date, time).
 
 <Link to Diagram/Algo>
+
 **Data Storage**
 Store the extracted travel booking data in a database. You may need separate tables for different types of bookings (air, rail, car).
-
 
 **Trip Grouping**
 Implement a trip grouping algorithm that identifies bookings belonging to the same trip based on shared criteria (e.g., common dates, destinations).
@@ -63,19 +77,14 @@ Group the bookings into trips and create a trip identifier.
 
 Display each trip with a summary of the bookings (flights, trains, car rentals) and relevant details (dates, times, destinations).
 
-## Dashboard Presentation:
 
-Develop a user-friendly dashboard where users can view their trips.
-
-Provide options to edit, delete, or add new bookings to the trip.
 
 ## Notifications and Alerts:
 
 Implement notifications/alerts to inform users when new bookings are detected or when trip details are updated.
 ![Notification](/Assets/Notification%20Draft.png)
-## User Preferences:
 
-Allow users to set preferences for how they want their trips grouped or presented on the dashboard.
+
 
 ## CAP
 
@@ -87,6 +96,7 @@ Cloud Infra from AWS/Azure/GCP planner.
 
 ## Logical View
 ![Logical Architecture](/Assets/Logical%20Arch)
+
 ## Physical View
 
 ## ADR
