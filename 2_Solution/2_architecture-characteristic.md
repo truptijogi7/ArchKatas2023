@@ -19,5 +19,5 @@ The number of users per day 2M Weekly avergaing to approx 300k DAU and can go up
 
 5. Evolvability-Both the UI and interfaces need to be deisgned for future extendability and to support growth of the platform in the form of new regions/vendors/travel agencies onboarded.
 
-![characteristics](/Assets/architecture-styles-worksheet.pdf)
+![characteristics](/Assets/architecture-styles-worksheet.png)
 *Figure 1 Architecture Characteristics*
