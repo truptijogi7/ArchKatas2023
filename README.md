@@ -254,5 +254,5 @@ Have used 1st degree contacts and not followers to avoid a large hit when there 
 
 ## Deployment Strategy
 
-![Deployment Diagram](/Assets/Deployment)
+![Deployment Diagram](/Assets/Katas_Deployment_Diagram.png)
 
