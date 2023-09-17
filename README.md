@@ -6,7 +6,7 @@ This is a team submission for O'Reilly [Architecture Katas fall 2023](https://le
 
 # Team Members:  
 - [Srujana Shreevatsav](https://www.linkedin.com/in/srujanasrivatsav/)
-- Akash Ranjan
+- [Akash Ranjan](https://www.linkedin.com/in/akash-ranjan-99b66017/)
 - [Trupti Jogi](https://www.linkedin.com/in/trupti-jogi/)
 - [Raj Dugad](https://www.linkedin.com/in/raj-dugad)
 
